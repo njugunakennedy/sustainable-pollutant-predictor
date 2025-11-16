@@ -1,0 +1,69 @@
+Sustainable Pollutant Removal Predictor
+
+🔬 Project Overview
+
+This project is a Streamlit web application that leverages Machine Learning (Polynomial Regression) and interactive data visualization (Plotly) to analyze and predict the efficiency of sustainable pollutant removal from dairy processing wastewater.
+
+It is based on the methodology and experimental results of the paper: Pollutant Removal and Nutrient Recovery from Milk Processing Wastewater.
+
+🎯 Goal
+
+The primary goal of this application is to demonstrate the critical dependence of Milk Fat Removal Efficiency on the solution pH, as identified by the Response Surface Methodology (BBD) in the study.
+
+The application serves as a portfolio piece showcasing:
+
+Data Synthesis: Creating realistic datasets from scientific reports.
+
+Machine Learning: Implementing non-linear regression for predictive modeling.
+
+Data Visualization: Creating an interactive, narrative-driven interface.
+
+✨ Key Features
+
+Interactive Prediction: Use a slider to adjust the solution pH and get a real-time prediction of the expected Milk Fat Removal Efficiency (%).
+
+Polynomial Regression: A $3^{rd}$ degree polynomial model is trained to accurately capture the non-linear relationship (peaking at pH 4) reported in the experimental data.
+
+Plotly Visualization: Displays the synthesized experimental data points alongside the ML model's fitted prediction curve.
+
+Key Findings Summary: Visual presentation of critical parameters like Maximum Adsorption Capacity ($Q_{\text{max}}$) and controlling factors for different pollutants.
+
+🛠️ Tech Stack
+
+Language: Python
+
+Framework: Streamlit
+
+Data Analysis: Pandas, NumPy
+
+Machine Learning: Scikit-learn (Polynomial Regression)
+
+Visualization: Plotly
+
+🚀 Installation and Run Instructions
+
+To run this application locally and explore the predictive model:
+
+Clone the repository:
+
+git clone https://github.com/njugunakennedy/sustainable-pollutant-predictor.git
+cd sustainable-pollutant-predictor
+
+
+Create a virtual environment (Recommended):
+
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+
+Install the dependencies:
+
+pip install -r requirements.txt
+
+
+Run the Streamlit application:
+
+streamlit run app.py
+
+
+The application will open automatically in your web browser (usually at http://localhost:8501).
