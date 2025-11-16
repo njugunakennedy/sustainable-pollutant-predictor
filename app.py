@@ -5,6 +5,7 @@ import plotly.express as px
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
+import os
 
 # Set random seed for reproducibility
 np.random.seed(42)
@@ -73,8 +74,52 @@ ml_model = train_prediction_model()
 # --- HEADER AND INTRO ---
 st.title("🧪 Sustainable Pollutant Removal Predictor")
 st.markdown("### Predicting Milk Fat Removal using Biochar and Machine Learning")
+
+# Research Purpose and Sustainability Impact Section
+with st.expander("🎯 Research Objectives & Sustainability Impact", expanded=True):
+    st.markdown("""
+    ### Research Purpose
+    
+    This research addresses a critical sustainability challenge in the dairy industry by:
+    
+    1. **Fabricating biochar from milk sludge** for the adsorption of organic matter (OM) and nutrients from milk processing wastewater
+    2. **Conducting batch adsorption experiments** to evaluate biochar performance in removing pollutants and characterizing biochar properties
+    3. **Proposing industrial-scale applications** via simulation to enhance wastewater treatment sustainability in the dairy sector
+    
+    ### 🌱 Sustainability Solution: Circular Economy Approach
+    
+    **The Problem:** Milk processing plants generate massive amounts of wastewater and sludge that require costly treatment and disposal.
+    
+    **The Solution:** Convert waste sludge into valuable biochar adsorbent - transforming a waste product into a resource!
+    
+    - **Waste Input:** 6,144 kg of sludge per day (from 500,000 L milk production)
+    - **Resource Output:** 1,947.65 kg of biochar per day (32% yield)
+    - **Impact:** Biochar removes pollutants from 1,236,000 liters of wastewater daily
+    
+    This creates a **circular economy** where waste becomes a resource, reducing both disposal costs and treatment chemical requirements.
+    """)
+    
+    # Industrial Scale Case Study
+    st.markdown("---")
+    st.subheader("🏭 Industrial Scale Application: Brookside Milk Plant, Kenya")
+    
+    col_case1, col_case2 = st.columns(2)
+    with col_case1:
+        st.metric("Daily Milk Production", "500,000 L")
+        st.metric("Wastewater Generated", "1,236,000 L/day")
+    with col_case2:
+        st.metric("Sludge Produced", "6,144 kg/day")
+        st.metric("Biochar Yield", "1,947.65 kg/day")
+    
+    st.markdown("""
+    The research simulated a **two-tank system in series** to handle industrial-scale milk fat COD and anionic pollutant removal, 
+    demonstrating the viability of this sustainable approach for real-world dairy processing facilities.
+    """)
+
+st.markdown("---")
 st.markdown("""
-This portfolio project demonstrates the application of **Polynomial Regression** to predict pollutant removal efficiency based on key operational parameters, leveraging data trends from the paper: *Pollutant Removal and Nutrient Recovery from Milk Processing Wastewater*.
+This application demonstrates **Polynomial Regression** to predict pollutant removal efficiency based on key operational parameters, 
+leveraging data trends from the paper: *Pollutant Removal and Nutrient Recovery from Milk Processing Wastewater*.
 
 The paper identified **pH** as the **only significant factor** for Milk Fat removal efficiency.
 """)
@@ -192,3 +237,38 @@ with col2:
         The project confirms that biochar derived from milk sludge is a **sustainable and effective** adsorbent, particularly for Milk Fat (Organic Matter). The two-tank industrial simulation confirmed the potential to handle large wastewater volumes, demonstrating the viability of this circular economy approach.
         """
     )
+
+# --- INDUSTRIAL SCALE SIMULATION SECTION ---
+st.markdown("---")
+st.header("3. Industrial Scale Two-Tank System Design")
+
+st.markdown("""
+The research developed a **two-tank system in series** to simulate industrial-scale treatment of milk processing wastewater. 
+This design enables continuous treatment of large volumes while optimizing biochar utilization and pollutant removal efficiency.
+""")
+
+# Display the two-tank scenario images
+img_col1, img_col2 = st.columns(2)
+
+with img_col1:
+    partial_img_path = "Images/Scenario Partail.png"
+    if os.path.exists(partial_img_path):
+        st.image(partial_img_path, caption="Partial Treatment Scenario", use_container_width=True)
+    else:
+        st.warning("Scenario Partial image not found")
+
+with img_col2:
+    whole_img_path = "Images/Scenario Whole.png"
+    if os.path.exists(whole_img_path):
+        st.image(whole_img_path, caption="Complete Treatment Scenario", use_container_width=True)
+    else:
+        st.warning("Scenario Whole image not found")
+
+st.markdown("""
+**Key Design Features:**
+- **Tank 1:** Primary treatment for high-concentration pollutants
+- **Tank 2:** Secondary treatment for polishing and final removal
+- **Continuous Flow:** Handles 1,236,000 L/day wastewater volume
+- **Biochar Regeneration:** Enables reuse of adsorbent material
+- **Scalability:** Design validated for Brookside milk plant case study
+""")

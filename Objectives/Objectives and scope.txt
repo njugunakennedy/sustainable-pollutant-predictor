@@ -1,0 +1,37 @@
+Objectives
+
+1.2. Research Objectives
+- To fabricate biochar from milk sludge for the
+adsorption of organic matter (OM) and nutrients from
+milk processing wastewater.
+- Conduct batch adsorption experiments to
+evaluate the performance of the biochar in removing
+pollutants from MPWW and to characterize the biochar
+properties.
+- Propose directions for the application of
+biochar in treating multiple pollutants via simulation,
+thereby enhancing the sustainability of wastewater
+treatment in the dairy sector.
+
+Scope 
+
+3.2 Two Tank Set-up Methodology
+
+To simulate an industrial scale of milk fat COD and
+anionic removal, the Brookside milk plant in Kenya was
+selected as a case study. The plant has a daily production
+of 500,000 liters of milk, with the main products being
+skim milk, butter, ghee, and cheese [10]. By following
+their daily volumes of both wastewater and sludge, a
+system design of two tanks in series was developed.
+Based on data from the United Nations Food and
+Agriculture Organization, milk processing produces
+2400 kg of wastewater per ton of milk processed. Sludge
+produced is about sludge production is about 0.5 kg per
+kg of removed COD in aerobic (mostly used in Kenya)
+and in anaerobic systems about 0.1 kg per kg of removed
+COD [11]. This translates to 1,236,000 liters of milk
+wastewater per day and 6,144 kg of sludge per day. The
+biomass yield was 3.17 g per 10 g; thus, 6144 kg of
+sludge will yield 1947.65 kg, and the aim is to reduce
+milk fat COD and anionic pollutants.
