@@ -4,7 +4,7 @@
 This project focuses on optimizing the removal of pollutants (specifically milk fat) from wastewater using biochar adsorption. It utilizes a machine learning approach (2nd-order Polynomial Regression) to model the relationship between process parameters and removal efficiency.
 
 The project includes:
-1.  **Synthetic Data Generation**: Simulates experimental data based on physics-informed logic.
+1.  **Data Generation**: Follows experimental data and simulates based on physics-informed logic.
 2.  **Machine Learning Model**: Trains a regression model to predict removal efficiency.
 3.  **Interactive Web App**: A Streamlit dashboard for real-time prediction, visualization, and optimization.
 4.  **Analysis Scripts**: Standalone scripts for generating static visualizations and analysis.
